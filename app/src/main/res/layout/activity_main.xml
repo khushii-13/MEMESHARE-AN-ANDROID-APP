@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/nameImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@id/sharebutton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:id="@+id/progress"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/nameImage"
+        app:layout_constraintTop_toTopOf="@id/nameImage"
+        app:layout_constraintLeft_toLeftOf="@+id/nameImage"
+        app:layout_constraintRight_toRightOf="@id/nameImage"
+        android:outlineAmbientShadowColor="@color/black"
+
+        />
+
+    <Button
+        android:id="@+id/sharebutton"
+        android:layout_width="0dp"
+        android:layout_marginTop="100dp"
+        android:textFontWeight="300"
+        android:backgroundTint="@color/share.next.color"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:onClick="sharememe"
+        android:padding="33dp"
+        android:text="@string/share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/nextbutton"
+      android:backgroundTint="@color/share.next.color"
+        android:layout_width="0dp"
+        android:textColor="@color/white"
+        android:onClick="nextmeme"
+        android:layout_marginTop="100dp"
+        android:textFontWeight="300"
+        android:layout_height="wrap_content"
+        android:padding="33dp"
+        android:text="@string/next"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
